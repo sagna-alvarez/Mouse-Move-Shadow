@@ -38,17 +38,21 @@
     </style>
 
     <script>
+
+
         const hero = document.querySelector('.hero');
         const text = document.querySelector('h1');
         const walk = 500;
 
 
         function shadow(e) {
-            const width = hero.offsetWidth;
-            const height = hero.offsetHeight;
+            const { offsetWidth: width, offsetHeight: height } = hero;
+            let { offsetX: x, offsetY: y } = e
+            // const width = hero.offsetWidth;
+            // const height = hero.offsetHeight;
 
-            let x = e.offsetX;
-            let y = e.offsetY;
+            // let x = e.offsetX;
+            // let y = e.offsetY;
 
             if (this !== e.target) {
                 x = x + e.target.offsetLeft;
